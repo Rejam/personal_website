@@ -26,7 +26,8 @@
   top: 0;
   width: 100%;
   opacity: 0.9;
-  visibility: hidden; }
+  visibility: hidden;
+  height: 100vh; }
   .menu.show {
     visibility: visible; }
   .menu-brand, .menu-nav {
@@ -34,10 +35,9 @@
     flex-flow: column wrap;
     flex: 1;
     place-content: center;
-    height: 100vh;
     transition: all 0.3s ease-out; }
     .menu-brand.show, .menu-nav.show {
-      transform: translateY(0); }
+      transform: translate(0, 0); }
   .menu-brand {
     background-color: #debf10;
     transform: translateY(100%); }
@@ -82,6 +82,26 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  .menu {
+    flex-direction: column; }
+    .menu-brand {
+      flex: 1;
+      transform: translateX(-100%); }
+      .menu-brand .portrait {
+        background-image: url("../img/portrait_small.jpg");
+        width: 150px;
+        height: 150px; }
+    .menu-nav {
+      flex: 3;
+      transform: translateX(100%); } }
 
 * {
   box-sizing: border-box; }

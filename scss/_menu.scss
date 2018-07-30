@@ -41,6 +41,7 @@
   width: 100%;
   opacity: 0.9;
   visibility: hidden;
+  height: 100vh;
 
   &.show {
     visibility: visible;
@@ -51,11 +52,10 @@
     flex-flow: column wrap;
     flex: 1;
     place-content: center;
-    height: 100vh;
     //overflow: hidden;
     @include easeOut;
     &.show {
-      transform: translateY(0);
+      transform: translate(0, 0);
     }
   }
 
