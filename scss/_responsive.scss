@@ -36,6 +36,15 @@
       transform: translateX(100%)
     }
   }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+
+    .job {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 @include media-sm {

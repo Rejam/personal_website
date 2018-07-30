@@ -11,7 +11,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background-color: #fff;
+    background-color: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -55,7 +55,7 @@
     //overflow: hidden;
     @include easeOut;
     &.show {
-      transform: translate(0, 0);
+      transform: translateY(0);
     }
   }
 
@@ -92,6 +92,7 @@
 
     &.current > a {
       color: $secondary-color;
+      font-weight: 600;
     }
   }
 
