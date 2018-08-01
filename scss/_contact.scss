@@ -1,0 +1,15 @@
+.contact-details {
+  text-align: center;
+
+  > div {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1em 0;
+    border-bottom: 3px solid $primary-color;
+    @include easeOut;
+
+    &:hover {
+      border-color: $secondary-color
+    }
+  }
+}
