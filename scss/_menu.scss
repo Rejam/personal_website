@@ -1,3 +1,9 @@
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
 // Menu button
 .menu-btn {
   position: absolute;
@@ -113,5 +119,27 @@
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
+  }
+}
+
+@include media-md {
+  .menu {
+    flex-direction: column;
+
+    &-brand {
+      flex: 1;
+      transform: translateX(-100%);
+
+      .portrait {
+        background-image: url("../img/portrait_small.jpg");
+        width: 150px;
+        height: 150px;
+      }
+
+    }
+    &-nav {
+      flex: 3;
+      transform: translateX(100%)
+    }
   }
 }

@@ -1,0 +1,28 @@
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($primary-color, $background-opacity);
+        z-index: -999;
+      }
+    }
+  }
+}
+
+#home {
+  overflow: hidden;
+  h1 {
+    margin-top: 20vh;
+  }
+}

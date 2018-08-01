@@ -1,3 +1,11 @@
+.text-secondary {
+  color: #eece1a; }
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%; }
+
 .menu-btn {
   position: absolute;
   z-index: 2000;
@@ -84,6 +92,94 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column; }
+    .menu-brand {
+      flex: 1;
+      transform: translateX(-100%); }
+      .menu-brand .portrait {
+        background-image: url("../img/portrait_small.jpg");
+        width: 150px;
+        height: 150px; }
+    .menu-nav {
+      flex: 3;
+      transform: translateX(100%); } }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  transition: all 0.3s ease-out; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background-color: #eece1a;
+    color: #000; }
+
+.btn-dark {
+  background-color: black;
+  color: #fff; }
+
+.btn-light {
+  background-color: #c4c4c4;
+  color: #333; }
+
+#home {
+  overflow: hidden; }
+  #home h1 {
+    margin-top: 20vh; }
+
+.about-content {
+  display: grid;
+  grid-template-areas: "img  bio   bio" "job1 job2  job3";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px; }
+  .about-content .bio-img {
+    grid-area: img;
+    margin: auto;
+    border-radius: 50%;
+    border: #eece1a 3px solid; }
+  .about-content .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-content .job-1 {
+    grid-area: job1; }
+  .about-content .job-2 {
+    grid-area: job2; }
+  .about-content .job-3 {
+    grid-area: job3; }
+  .about-content .job {
+    background-color: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 3px solid; }
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    display: flex;
+    flex-direction: column; }
+    .about-content .job {
+      margin-bottom: 30px; } }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem; }
+  .projects img {
+    width: 100%;
+    border: 3px solid #fff;
+    opacity: 0.7;
+    transition: all 0.3s ease-out; }
+    .projects img:hover {
+      opacity: 1;
+      border-color: #eece1a; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #2b2b2b;
+  color: #fff;
+  height: 60px; }
+
 * {
   box-sizing: border-box; }
 
@@ -123,14 +219,6 @@ a {
   color: #fff;
   text-decoration: none; }
 
-header {
-  position: fixed;
-  z-index: 1000;
-  width: 100%; }
-
-.text-secondary {
-  color: #eece1a; }
-
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
@@ -141,41 +229,6 @@ main {
       main .icons a:hover {
         color: #eece1a;
         transition: all 0.3s ease-out; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
-
-.about-content {
-  display: grid;
-  grid-template-areas: "img  bio   bio" "job1 job2  job3";
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px; }
-  .about-content .bio-img {
-    grid-area: img;
-    margin: auto;
-    border-radius: 50%;
-    border: #eece1a 3px solid; }
-  .about-content .bio {
-    grid-area: bio;
-    font-size: 1.5rem; }
-  .about-content .job-1 {
-    grid-area: job1; }
-  .about-content .job-2 {
-    grid-area: job2; }
-  .about-content .job-3 {
-    grid-area: job3; }
-  .about-content .job {
-    background-color: #515151;
-    padding: 0.5rem;
-    border-bottom: #eece1a 3px solid; }
-
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #2b2b2b;
-  color: #fff;
-  height: 60px; }
 
 @media screen and (max-width: 768px) {
   main {
@@ -183,21 +236,4 @@ main {
     text-align: center; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
-  .menu {
-    flex-direction: column; }
-    .menu-brand {
-      flex: 1;
-      transform: translateX(-100%); }
-      .menu-brand .portrait {
-        background-image: url("../img/portrait_small.jpg");
-        width: 150px;
-        height: 150px; }
-    .menu-nav {
-      flex: 3;
-      transform: translateX(100%); }
-  .about-content {
-    display: flex;
-    flex-direction: column; }
-    .about-content .job {
-      margin-bottom: 30px; } }
+      margin-bottom: 1rem; } }
